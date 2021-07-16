@@ -1,0 +1,14 @@
+import firebase from 'firebase'
+
+const firebaseConfig = {
+    // TODO Firebase Config
+}
+
+const app = !firebase.apps.length
+    ? firebase.initializeApp(firebaseConfig)
+    : firebase.app()
+
+const auth = app.auth()
+const provider = new firebase.auth.GoogleAuthProvider()
+
+export { auth, provider }
